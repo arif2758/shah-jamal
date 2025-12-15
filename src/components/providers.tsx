@@ -7,8 +7,8 @@ export function Providers({ children }: { children: React.ReactNode }) {
   return (
     <ThemeProvider
       attribute="class"
-      defaultTheme="system"
-      enableSystem
+      defaultTheme="light" // ✅ Change 2: Set default to "light"
+      enableSystem={false} // Optional: এটি false করলে সিস্টেমের ডার্ক মোড ইগনোর করবে
       disableTransitionOnChange
     >
       <LanguageProvider>{children}</LanguageProvider>

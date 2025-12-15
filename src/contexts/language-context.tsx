@@ -15,16 +15,21 @@ const LanguageContext = createContext<LanguageContextType | undefined>(
 );
 
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
+  // ১. ডিফল্ট ভাষা 'bn' সেট করা হলো (সার্ভার ও ক্লায়েন্ট দুই জায়গাতেই প্রথমে এটা থাকবে)
   const [language, setLanguage] = useState<Language>("bn");
-  const [mounted, setMounted] = useState(false);
 
+  // ২. শুধুমাত্র ক্লায়েন্ট সাইডে লোকাল স্টোরেজ চেক হবে
   useEffect(() => {
-    const saved = localStorage.getItem("language") as Language;
-    if (saved && (saved === "en" || saved === "bn")) {
-      setLanguage(saved);
+    // ব্রাউজার এনভায়রনমেন্ট চেক (নিরাপত্তার জন্য)
+    if (typeof window !== "undefined") {
+      const saved = localStorage.getItem("language") as Language;
+      // যদি সেভ করা ভাষা থাকে এবং সেটা বর্তমান ভাষার চেয়ে আলাদা হয়, তবেই আপডেট হবে
+      if (saved && (saved === "en" || saved === "bn") && saved !== language) {
+        setLanguage(saved);
+      }
     }
-    setMounted(true);
-  }, []);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []); // এটি কেবল একবার রান হবে
 
   const handleSetLanguage = (lang: Language) => {
     setLanguage(lang);
@@ -32,13 +37,11 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
   };
 
   const toggleLanguage = () => {
-    handleSetLanguage(language === "en" ? "bn" : "en");
+    const newLang = language === "en" ? "bn" : "en";
+    handleSetLanguage(newLang);
   };
 
-  if (!mounted) {
-    return null; // or a loading spinner to prevent hydration mismatch
-  }
-
+  // ৩. 'mounted' চেক রিমুভ করা হয়েছে যাতে SEO ভালো হয় এবং এরর চলে যায়
   return (
     <LanguageContext.Provider
       value={{ language, setLanguage: handleSetLanguage, toggleLanguage }}

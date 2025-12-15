@@ -28,7 +28,7 @@ export default function Hero() {
         <div className="flex flex-col items-start gap-6 text-left animate-in slide-in-from-bottom-8 fade-in duration-1000">
           
           <div className="space-y-2">
-            <h1 className="text-4xl font-extrabold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl">
+            <h1 className="text-3xl font-extrabold tracking-tighter sm:text-4xl md:text-4xl lg:text-5xl">
               <span className="block text-foreground">{language === 'en' ? "I'm" : "আমি"}</span>
               {/* Tailwind v4 Linear Gradient */}
               <span className="bg-linear-to-r from-primary via-orange-500 to-amber-500 bg-clip-text text-transparent">
