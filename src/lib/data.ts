@@ -8,8 +8,8 @@ export const DATA = {
       contact: "Contact",
     },
     hero: {
-      greeting: "Welcome to my Official Portfolio",
-      name: "Md. Shah Jamal Bachar",
+      greeting: "Welcome to my Official Portfolio", 
+      name: "Md. Shah Jamal Basar",
       title: "Entrepreneur | Philanthropist",
       desc: "A dedicated business leader from a prestigious Muslim family in Bikrampur. Establishing trust through honesty and serving society with devotion.",
       cta: "View Portfolio",
