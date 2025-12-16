@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   ),
   title: "Md. Shah Jamal Basar | Business Portfolio",
   description:
-    "Official Business Portfolio of Md. Shah Jamal Basar - Entrepreneur & Philanthropist. Leading Shah Jamal Basar Trust and various successful ventures.",
+    "Entrepreneur & Philanthropist. Official Business Portfolio of Md. Shah Jamal Basar.",
   keywords: [
     "Md. Shah Jamal Basar",
     "Shah Jamal Basar",
