@@ -15,7 +15,7 @@ import {
 import { useLanguage } from "@/contexts/language-context";
 import { Button } from "@/components/ui/button";
 import { DATA, STATS_DATA } from "@/lib/data";
-import { cn } from "@/lib/utils";
+import { cn } from "@/lib/utils"; 
 import styles from "./hero.module.css";
 
 // Counter Animation Hook (Same as before)
@@ -133,7 +133,7 @@ export default function Hero() {
               className={cn(
                 "order-2 lg:order-1 lg:col-span-7 flex flex-col items-center lg:items-start text-center lg:text-left space-y-6",
                 styles.fadeInUp
-              )}
+              )} 
             >
               <div className="space-y-1 w-full">
                 {/* "I'm" / "আমি" */}

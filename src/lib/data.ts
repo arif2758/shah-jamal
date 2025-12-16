@@ -268,16 +268,16 @@ export const STATS_DATA = [
   },
   {
     value: "15+",
-    label: { en: "Companies Established", bn: "প্রতিষ্ঠিত কোম্পানি" },
+    label: { en: "Business Established", bn: "প্রতিষ্ঠিত ব্যবসা" },
     icon: "Building",
   },
   {
-    value: "500+",
+    value: "30+",
     label: { en: "Employees", bn: "কর্মসংস্থান সৃষ্টি" },
     icon: "Users",
   },
   {
-    value: "100+",
+    value: "17+",
     label: { en: "Social Projects", bn: "সামাজিক প্রকল্প" },
     icon: "Heart",
   },

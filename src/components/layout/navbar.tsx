@@ -2,13 +2,13 @@
 
 import { useEffect, useState, useMemo } from "react";
 import Link from "next/link";
-import Image from "next/image"; // ✅ Import Image
+import Image from "next/image";
 import {
   Menu,
   X,
-  Home,
+  House,
   User,
-  Briefcase,
+  Building2,
   HeartHandshake,
   Phone,
 } from "lucide-react";
@@ -28,24 +28,22 @@ export default function Navbar() {
 
   const t = DATA[language].nav;
 
-  // ✅ FIX: Wrap navItems in useMemo to prevent unnecessary re-renders
   const navItems = useMemo(
     () => [
-      { key: "home", label: t.home, href: "#home", icon: Home },
-      { key: "about", label: t.about, href: "#about", icon: User },
+      { key: "home", label: t.home, href: "#home", icon: House },
       {
         key: "business",
         label: t.business,
         href: "#business",
-        icon: Briefcase,
+        icon: Building2,
       },
       { key: "social", label: t.social, href: "#social", icon: HeartHandshake },
+      { key: "about", label: t.about, href: "#about", icon: User },
       { key: "contact", label: t.contact, href: "#contact", icon: Phone },
     ],
     [t]
-  ); // Dependency is 't' (translation), so it updates only when language changes
+  );
 
-  // ScrollSpy & Glassmorphism Trigger
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
@@ -68,7 +66,7 @@ export default function Navbar() {
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [navItems]); // ✅ Now safe to include navItems
+  }, [navItems]);
 
   return (
     <header
@@ -88,11 +86,11 @@ export default function Navbar() {
           href="#home"
           className="flex items-center gap-3 transition-transform hover:scale-105"
         >
-          {/* ✅ Logo Image Update */}
-          <div className="relative h-18 w-18 overflow-hidden rounded-lg">
+          {/* ✅ Fixed: Valid Tailwind size */}
+          <div className="relative h-10 w-10 overflow-hidden rounded-lg">
             <Image
               src="/logo.svg"
-              alt="Logo"
+              alt="Shah Jamal Logo"
               fill
               className="object-contain"
               priority
@@ -121,11 +119,10 @@ export default function Navbar() {
                     : "text-muted-foreground hover:bg-accent hover:text-foreground"
                 )}
               >
+                {/* ✅ FIX: Removed fill-current, only stroke color */}
                 <Icon
-                  className={cn(
-                    "h-4 w-4 transition-transform group-hover:scale-110",
-                    isActive && "fill-current"
-                  )}
+                  className="h-4 w-4 transition-transform group-hover:scale-110"
+                  strokeWidth={2} // ✅ Optional: Better stroke visibility
                 />
                 {item.label}
               </Link>
@@ -161,7 +158,7 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Menu (Dropdown) */}
+      {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <div className="absolute inset-x-0 top-16 border-b border-border/40 bg-background/95 backdrop-blur-xl md:hidden animate-in slide-in-from-top-5 shadow-xl">
           <nav className="container flex flex-col gap-2 p-4">
@@ -180,7 +177,8 @@ export default function Navbar() {
                   )}
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
-                  <Icon className="h-5 w-5" />
+                  {/* ✅ FIX: Removed fill-current from mobile too */}
+                  <Icon className="h-5 w-5" strokeWidth={2} />
                   {item.label}
                 </Link>
               );
