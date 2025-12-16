@@ -80,14 +80,15 @@ export default function Navbar() {
           : "translate-y-0"
       )}
     >
-      <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
-        {/* Logo */}
+      {/* ✅ Compact Navbar: h-14 (56px) minimum height */}
+      <div className="container mx-auto flex h-14 items-center justify-between px-4 md:px-6">
+        {/* Logo - Maximum size within navbar */}
         <Link
           href="#home"
-          className="flex items-center gap-3 transition-transform hover:scale-105"
+          className="flex items-center gap-2 transition-transform hover:scale-105"
         >
-          {/* ✅ Fixed: Valid Tailwind size */}
-          <div className="relative h-10 w-10 overflow-hidden rounded-lg">
+          {/* ✅ Logo: h-12 (48px) - максимальный размер с 4px padding сверху/снизу */}
+          <div className="relative h-12 w-12 overflow-hidden rounded-lg flex-shrink-0">
             <Image
               src="/logo.svg"
               alt="Shah Jamal Logo"
@@ -96,15 +97,16 @@ export default function Navbar() {
               priority
             />
           </div>
+          {/* Text компактнее */}
           <div className="hidden md:flex flex-col leading-none">
-            <span className="text-lg font-bold tracking-tight text-primary">
+            <span className="text-base font-bold tracking-tight text-primary">
               Shah Jamal
             </span>
           </div>
         </Link>
 
-        {/* Desktop Nav */}
-        <nav className="hidden items-center gap-1 md:flex">
+        {/* Desktop Nav - Compact */}
+        <nav className="hidden items-center gap-0.5 md:flex">
           {navItems.map((item) => {
             const Icon = item.icon;
             const isActive = activeSection === item.key;
@@ -113,16 +115,15 @@ export default function Navbar() {
                 key={item.key}
                 href={item.href}
                 className={cn(
-                  "group flex items-center gap-1.5 rounded-full px-4 py-2 text-sm font-medium transition-all duration-300",
+                  "group flex items-center gap-1.5 rounded-full px-3 py-1.5 text-sm font-medium transition-all duration-300",
                   isActive
                     ? "bg-primary/10 text-primary"
                     : "text-muted-foreground hover:bg-accent hover:text-foreground"
                 )}
               >
-                {/* ✅ FIX: Removed fill-current, only stroke color */}
                 <Icon
-                  className="h-4 w-4 transition-transform group-hover:scale-110"
-                  strokeWidth={2} // ✅ Optional: Better stroke visibility
+                  className="h-3.5 w-3.5 transition-transform group-hover:scale-110"
+                  strokeWidth={2}
                 />
                 {item.label}
               </Link>
@@ -130,13 +131,13 @@ export default function Navbar() {
           })}
         </nav>
 
-        {/* Actions */}
-        <div className="flex items-center gap-2">
+        {/* Actions - Compact */}
+        <div className="flex items-center gap-1">
           <Button
             variant="ghost"
             size="sm"
             onClick={toggleLanguage}
-            className="w-10 font-bold text-muted-foreground hover:text-primary"
+            className="h-8 w-8 p-0 font-bold text-muted-foreground hover:text-primary"
           >
             {language === "en" ? "BN" : "EN"}
           </Button>
@@ -146,13 +147,13 @@ export default function Navbar() {
           <Button
             variant="ghost"
             size="icon"
-            className="md:hidden"
+            className="md:hidden h-8 w-8"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? (
-              <X className="h-5 w-5" />
+              <X className="h-4 w-4" />
             ) : (
-              <Menu className="h-5 w-5" />
+              <Menu className="h-4 w-4" />
             )}
           </Button>
         </div>
@@ -160,8 +161,8 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="absolute inset-x-0 top-16 border-b border-border/40 bg-background/95 backdrop-blur-xl md:hidden animate-in slide-in-from-top-5 shadow-xl">
-          <nav className="container flex flex-col gap-2 p-4">
+        <div className="absolute inset-x-0 top-14 border-b border-border/40 bg-background/95 backdrop-blur-xl md:hidden animate-in slide-in-from-top-5 shadow-xl">
+          <nav className="container flex flex-col gap-1 p-3">
             {navItems.map((item) => {
               const Icon = item.icon;
               const isActive = activeSection === item.key;
@@ -170,15 +171,14 @@ export default function Navbar() {
                   key={item.key}
                   href={item.href}
                   className={cn(
-                    "flex items-center gap-3 rounded-md px-4 py-3 text-sm font-medium transition-colors",
+                    "flex items-center gap-3 rounded-md px-3 py-2.5 text-sm font-medium transition-colors",
                     isActive
                       ? "bg-primary/10 text-primary"
                       : "text-muted-foreground hover:bg-accent hover:text-foreground"
                   )}
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
-                  {/* ✅ FIX: Removed fill-current from mobile too */}
-                  <Icon className="h-5 w-5" strokeWidth={2} />
+                  <Icon className="h-4 w-4" strokeWidth={2} />
                   {item.label}
                 </Link>
               );
