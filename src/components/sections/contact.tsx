@@ -73,7 +73,7 @@ export default function Contact() {
                 badgeColor="bg-primary/10 text-primary"
                 href={`tel:${t.phone}`}
               />
-              
+
               <ContactCard
                 icon={Phone}
                 title={language === "en" ? "Alternative" : "বিকল্প"}
@@ -89,7 +89,7 @@ export default function Contact() {
                 value={t.email}
                 href={`mailto:${t.email}`}
               />
-              
+
               <ContactCard
                 icon={MessageCircle}
                 title={language === "en" ? "WhatsApp" : "হোয়াটসঅ্যাপ"}
@@ -98,7 +98,7 @@ export default function Contact() {
                 badgeColor="bg-green-500/10 text-green-600 dark:text-green-500"
                 href={DATA.en.socialLinks.whatsapp}
               />
-              
+
               <ContactCard
                 icon={MapPin}
                 title={language === "en" ? "Visit Us" : "ঠিকানা"}
@@ -114,62 +114,82 @@ export default function Contact() {
 
             <div className="relative bg-white dark:bg-black/40 backdrop-blur-xl border border-border/50 rounded-3xl p-8 shadow-xl">
               <form onSubmit={handleSubmit} className="space-y-5">
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="space-y-2">
-                    <label className="text-sm font-medium ml-1">
-                      {language === "en" ? "Name" : "আপনার নাম"}
-                    </label>
-                    <input
-                      name="name"
-                      type="text"
-                      required
-                      className="w-full px-4 py-3 rounded-xl bg-secondary/50 border border-border focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
-                      placeholder="Ex: John Doe"
-                    />
-                  </div>
-                  <div className="space-y-2">
-                    <label className="text-sm font-medium ml-1">
-                      {language === "en" ? "Phone" : "মোবাইল"}
-                    </label>
-                    <input
-                      name="phone"
-                      type="text"
-                      required
-                      className="w-full px-4 py-3 rounded-xl bg-secondary/50 border border-border focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
-                      placeholder="+880..."
-                    />
-                  </div>
-                </div>
-
+                {/* ✅ Name Field - Full Width */}
                 <div className="space-y-2">
-                  <label className="text-sm font-medium ml-1">
-                    {language === "en" ? "Email" : "ইমেইল"}
+                  <label className="text-sm font-medium ml-1 text-foreground">
+                    {language === "en" ? "Full Name" : "আপনার সম্পূর্ণ নাম"}
+                    <span className="text-destructive ml-1">*</span>
                   </label>
                   <input
-                    name="email"
-                    type="email"
-                    className="w-full px-4 py-3 rounded-xl bg-secondary/50 border border-border focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
-                    placeholder="example@mail.com"
-                  />
-                </div>
-
-                <div className="space-y-2">
-                  <label className="text-sm font-medium ml-1">
-                    {language === "en" ? "Message" : "বার্তা"}
-                  </label>
-                  <textarea
-                    name="message"
+                    name="name"
+                    type="text"
                     required
-                    rows={4}
-                    className="w-full px-4 py-3 rounded-xl bg-secondary/50 border border-border focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all resize-none"
+                    className="w-full px-4 py-3 rounded-xl bg-secondary/50 border border-border focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all placeholder:text-muted-foreground/60"
                     placeholder={
-                      language === "en"
-                        ? "How can we help you?"
-                        : "আপনার বার্তা লিখুন..."
+                      language === "en" ? "e.g., John Doe" : "যেমন: আহমেদ হোসেন"
                     }
                   />
                 </div>
 
+                {/* ✅ Phone Field - Full Width */}
+                <div className="space-y-2">
+                  <label className="text-sm font-medium ml-1 text-foreground">
+                    {language === "en" ? "Phone Number" : "মোবাইল নাম্বার"}
+                    <span className="text-destructive ml-1">*</span>
+                  </label>
+                  <input
+                    name="phone"
+                    type="tel"
+                    required
+                    className="w-full px-4 py-3 rounded-xl bg-secondary/50 border border-border focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all placeholder:text-muted-foreground/60"
+                    placeholder={
+                      language === "en"
+                        ? "+880 1XXX-XXXXXX"
+                        : "+৮৮০ ১XXX-XXXXXX"
+                    }
+                  />
+                </div>
+
+                {/* ✅ Email Field - Full Width */}
+                <div className="space-y-2">
+                  <label className="text-sm font-medium ml-1 text-foreground">
+                    {language === "en" ? "Email Address" : "ইমেইল ঠিকানা"}
+                    <span className="text-muted-foreground/60 text-xs ml-1">
+                      ({language === "en" ? "Optional" : "ঐচ্ছিক"})
+                    </span>
+                  </label>
+                  <input
+                    name="email"
+                    type="email"
+                    className="w-full px-4 py-3 rounded-xl bg-secondary/50 border border-border focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all placeholder:text-muted-foreground/60"
+                    placeholder={
+                      language === "en"
+                        ? "example@email.com"
+                        : "example@email.com"
+                    }
+                  />
+                </div>
+
+                {/* ✅ Message Field - Full Width */}
+                <div className="space-y-2">
+                  <label className="text-sm font-medium ml-1 text-foreground">
+                    {language === "en" ? "Your Message" : "আপনার বার্তা"}
+                    <span className="text-destructive ml-1">*</span>
+                  </label>
+                  <textarea
+                    name="message"
+                    required
+                    rows={5}
+                    className="w-full px-4 py-3 rounded-xl bg-secondary/50 border border-border focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all resize-none placeholder:text-muted-foreground/60"
+                    placeholder={
+                      language === "en"
+                        ? "How can we help you today?"
+                        : "আজ আমরা কিভাবে আপনাকে সাহায্য করতে পারি?"
+                    }
+                  />
+                </div>
+
+                {/* Submit Button */}
                 <Button
                   type="submit"
                   disabled={isPending}
@@ -205,13 +225,13 @@ interface ContactCardProps {
   badgeColor?: string;
 }
 
-function ContactCard({ 
-  icon: Icon, 
-  title, 
-  value, 
+function ContactCard({
+  icon: Icon,
+  title,
+  value,
   href,
   badge,
-  badgeColor = "bg-muted text-muted-foreground"
+  badgeColor = "bg-muted text-muted-foreground",
 }: ContactCardProps) {
   const isExternal = href?.startsWith("http");
 
@@ -226,7 +246,9 @@ function ContactCard({
             {title}
           </p>
           {badge && (
-            <span className={`text-[10px] font-semibold px-2 py-0.5 rounded-full ${badgeColor}`}>
+            <span
+              className={`text-[10px] font-semibold px-2 py-0.5 rounded-full ${badgeColor}`}
+            >
               {badge}
             </span>
           )}

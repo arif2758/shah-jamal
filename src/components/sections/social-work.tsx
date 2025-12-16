@@ -1,6 +1,11 @@
 "use client";
 
-import { Handshake, Award, Building2, CheckCircle2 } from "lucide-react";
+import {
+  Handshake,
+  Award,
+  Users, // ✅ Better: Represents care & community service
+  CheckCircle2,
+} from "lucide-react";
 import { DATA } from "@/lib/data";
 import { useLanguage } from "@/contexts/language-context";
 
@@ -42,9 +47,9 @@ export default function Social() {
                   key={index}
                   className="group flex items-center gap-5 p-5 glass-card hover:border-primary/30 transition-all duration-300"
                 >
-                  {/* ✅ Blue Icon with Gradient Background */}
-                  <div className="size-14 rounded-2xl bg-linear-to-br from-primary/10 to-blue-600/10 dark:from-primary/20 dark:to-blue-400/20 flex items-center justify-center text-primary group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-primary/20 transition-all duration-300">
-                    <Building2 className="size-7" />
+                  {/* ✅ Heart Icon - Perfect for Social/Community Work */}
+                  <div className="size-14 rounded-2xl bg-linear-to-br from-primary/10 to-orange-600/10 dark:from-primary/20 dark:to-orange-400/20 flex items-center justify-center text-primary group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-primary/20 transition-all duration-300">
+                    <Users className="size-7 group-hover:fill-primary/20 transition-all" />
                   </div>
                   <div>
                     <p className="font-bold text-foreground text-lg group-hover:text-primary transition-colors">
