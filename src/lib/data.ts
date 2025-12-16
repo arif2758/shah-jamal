@@ -21,9 +21,10 @@ export const DATA = {
         "Youngest of six brothers. Father: Late Dalil Uddin Bachar, Mother: Achia Begum. Spouse: Chaiti Akter Shikha.",
       children: "Proud father of four daughters.",
       values:
-        "Honesty is the driving force of my life. I am always vocal against injustice and strive to help others with a smiling face.",
+        "A warm-hearted philanthropist with strong moral convictions. Recognized as an advocate for justice and equity. Guided by unwavering principles of honesty and integrity.",
+
       travel:
-        "Performed Holy Umrah multiple times and traveled across various Asian countries for business and leisure.",
+        "Frequent traveler to Mecca and Medina for religious observances. Experienced in international business travel across multiple Asian destinations.",
     },
     business: {
       title: "Business Portfolio",
@@ -70,9 +71,9 @@ export const DATA = {
         "পিতা মৃত দলিল উদ্দিন বাছার ও মাতা আছিয়া বেগম। ছয় ভাইয়ের মধ্যে সবার ছোট। সহধর্মিণী: চৈতী আক্তার শিখা।",
       children: "চার কন্যা সন্তানের জনক।",
       values:
-        "সততাই তার চলার প্রধান চালিকা শক্তি। তিনি সদাহাস্যোজ্জ্বল পরোপকারী মানুষ এবং অন্যায়ের বিরুদ্ধে প্রতিবাদী কণ্ঠস্বর।",
+        "একজন সদাহাস্যোজ্জ্বল, পরোপকারী এবং ধর্মপ্রাণ মানুষ। অন্যায়ের বিরুদ্ধে প্রতিবাদী কণ্ঠস্বর হিসেবে সমাজে পরিচিত। সততাই যার জীবনের মূল চালিকাশক্তি।",
       travel:
-        "পবিত্র ওমরাহ পালনের উদ্দেশ্যে একাধিকবার মক্কা মদিনা সফরসহ এশিয়ার বিভিন্ন দেশ ভ্রমণ করেছেন।",
+        "পবিত্র ওমরাহ পালনের উদ্দেশ্যে একাধিকবার মক্কা ও মদিনা সফর করাসহ ব্যবসার প্রয়োজনে ও ভ্রমণের উদ্দেশ্যে এশিয়ার বিভিন্ন দেশ ভ্রমণ করা হয়েছে।",
     },
     business: {
       title: "ব্যবসায়িক প্রতিষ্ঠানসমূহ",
