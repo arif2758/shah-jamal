@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   ),
   title: "Md. Shah Jamal Basar | Business Portfolio",
   description:
-    "Entrepreneur & Philanthropist. Official Business Portfolio of Md. Shah Jamal Basar.",
+    "Official Business Portfolio of Md. Shah Jamal Basar - Entrepreneur & Philanthropist. Leading Shah Jamal Basar Trust and various successful ventures.",
   keywords: [
     "Md. Shah Jamal Basar",
     "Shah Jamal Basar",
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     url: "https://shah-jamal.vercel.app",
     title: "Md. Shah Jamal Basar | Business Portfolio",
     description:
-      "Official Business Portfolio of Md. Shah Jamal Basar -  Entrepreneur & Philanthropist.",
+      "Entrepreneur & Philanthropist. Official Business Portfolio of Md. Shah Jamal Basar -  Leading Shah Jamal Basar Trust and various successful ventures.",
     siteName: "Md. Shah Jamal Basar",
     images: [
       {
