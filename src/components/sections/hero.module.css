@@ -5,7 +5,7 @@
   }
   50% {
     transform: translateY(-12px); /* নড়াচড়ার পরিমাণ */
-  }
+  } 
 }
 
 .animateFloat {

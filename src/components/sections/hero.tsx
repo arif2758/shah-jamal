@@ -1,3 +1,4 @@
+// src/components/sections/hero.tsx
 "use client";
 
 import { useState, useEffect, useRef } from "react";
@@ -15,10 +16,15 @@ import {
 import { useLanguage } from "@/contexts/language-context";
 import { Button } from "@/components/ui/button";
 import { DATA, STATS_DATA } from "@/lib/data";
-import { cn } from "@/lib/utils"; 
+import { cn } from "@/lib/utils";
+
 import styles from "./hero.module.css";
 
-// Counter Animation Hook (Same as before)
+import { TwinklingStars } from "@/components/ui/twinkling-stars"; // Option 1
+// OR
+
+// ... (keep all your existing functions: useCountUp, iconMap, StatItem)
+
 function useCountUp(end: number, duration: number = 2000) {
   const [count, setCount] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
@@ -60,7 +66,6 @@ const iconMap: Record<string, LucideIcon> = {
   Heart,
 };
 
-// Stat Item Component
 function StatItem({
   value,
   label,
@@ -100,7 +105,6 @@ function StatItem({
           {label}
         </div>
       </div>
-      {/* Divider only for Desktop */}
       {index < totalItems - 1 && (
         <div className="hidden md:block absolute right-0 top-1/2 -translate-y-1/2 w-px h-10 bg-border/60 translate-x-[50%]" />
       )}
@@ -113,54 +117,43 @@ export default function Hero() {
   const t = DATA[language].hero;
 
   return (
-    // ✅ FIX: Mobile uses min-h-screen (scrollable), Desktop uses h-screen (fixed)
     <section
       id="home"
       className="relative flex flex-col w-full overflow-hidden bg-background pt-24 pb-10 min-h-dvh lg:h-screen lg:pt-24 lg:pb-4"
     >
-      {/* Background Decor */}
-      <div className="absolute inset-0 -z-10 size-full bg-background bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] bg-size-[20px_20px] dark:bg-[radial-gradient(#1e293b_1px,transparent_1px)]">
-        <div className="absolute inset-0 bg-background/50 mask-[radial-gradient(ellipse_at_center,transparent_20%,black)]" />
-      </div>
+      <TwinklingStars />
 
-      <div className="container relative z-10 px-4 md:px-6 mx-auto flex flex-col h-full justify-between">
+      <div className="container relative z-20 px-4 md:px-6 mx-auto flex flex-col h-full justify-between">
         {/* Main Content */}
         <div className="flex-1 flex items-center py-6 lg:py-0">
           <div className="grid gap-10 lg:grid-cols-12 items-center w-full">
             {/* Left: Text */}
-            {/* Mobile: Centered text, Desktop: Left aligned */}
             <div
               className={cn(
                 "order-2 lg:order-1 lg:col-span-7 flex flex-col items-center lg:items-start text-center lg:text-left space-y-6",
                 styles.fadeInUp
-              )} 
+              )}
             >
               <div className="space-y-1 w-full">
-                {/* "I'm" / "আমি" */}
                 <span className="text-foreground text-lg md:text-2xl font-semibold block mb-1">
                   {language === "en" ? "I'm" : "আমি"}
                 </span>
 
-                {/* Name Title */}
-                {/* ✅ FIX: Mobile gets normal wrapping, Desktop gets whitespace-nowrap */}
                 <h1 className="text-3xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold tracking-tighter leading-tight lg:leading-none lg:whitespace-nowrap">
                   <span className="bg-linear-to-r from-primary to-orange-600 bg-clip-text text-transparent">
                     {t.name}
                   </span>
                 </h1>
 
-                {/* Subtitle */}
-                <h2 className="text-center text-lg md:text-2xl font-medium text-muted-foreground pt-2">
+                <h2 className="text-center lg:text-left text-lg md:text-2xl font-medium text-muted-foreground pt-2">
                   {t.title}
                 </h2>
               </div>
 
-              {/* Description */}
               <p className="max-w-2xl text-base text-muted-foreground sm:text-lg leading-relaxed line-clamp-none md:line-clamp-3 lg:line-clamp-none">
                 {t.desc}
               </p>
 
-              {/* Buttons */}
               <div className="flex flex-wrap justify-center lg:justify-start gap-4 pt-2 w-full">
                 <Button
                   asChild
@@ -185,7 +178,6 @@ export default function Hero() {
             </div>
 
             {/* Right: Image */}
-            {/* ✅ FIX: Mobile Order 1 (Top), Desktop Order 2 (Right) */}
             <div
               className={cn(
                 "order-1 lg:order-2 lg:col-span-5 relative mx-auto flex w-full items-center justify-center",
@@ -193,7 +185,6 @@ export default function Hero() {
                 styles.delay2
               )}
             >
-              {/* Responsive Size: Smaller on mobile, Larger on desktop */}
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-56 md:size-80 bg-primary/20 rounded-full blur-[80px] opacity-40" />
 
               <div className="relative aspect-square w-65 md:w-87.5 lg:w-100 overflow-hidden rounded-2xl border border-white/20 bg-white/10 shadow-2xl backdrop-blur-sm dark:border-white/10 dark:bg-black/10">
@@ -212,7 +203,6 @@ export default function Hero() {
         </div>
 
         {/* Stats Area */}
-        {/* ✅ FIX: Mobile has margin-top for spacing, Desktop uses mt-auto to stick bottom */}
         <div
           className={cn(
             "w-full pt-8 pb-4 lg:pt-4 border-t border-border/40 mt-10 lg:mt-auto",
