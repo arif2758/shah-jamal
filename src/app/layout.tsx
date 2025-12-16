@@ -26,43 +26,43 @@ export const metadata: Metadata = {
   metadataBase: new URL(
     process.env.NEXT_PUBLIC_APP_URL ?? "https://shah-jamal.vercel.app"
   ),
-  title: "Md. Shah Jamal Bachar | Business Portfolio",
+  title: "Md. Shah Jamal Basar | Business Portfolio",
   description:
-    "Official Business Portfolio of Md. Shah Jamal Bachar - Chairman, Entrepreneur & Philanthropist. Leading Shah Jamal Bachar Trust and various successful ventures.",
+    "Official Business Portfolio of Md. Shah Jamal Basar - Entrepreneur & Philanthropist. Leading Shah Jamal Basar Trust and various successful ventures.",
   keywords: [
-    "Md. Shah Jamal Bachar",
-    "Shah Jamal Bachar",
+    "Md. Shah Jamal Basar",
+    "Shah Jamal Basar",
     "Business Portfolio",
-    "Chairman",
+
     "Entrepreneur",
     "Philanthropist",
     "Bangladesh Business",
-    "Shah Jamal Bachar Trust",
+    "Shah Jamal Basar Trust",
   ],
-  authors: [{ name: "Md. Shah Jamal Bachar" }],
-  creator: "Md. Shah Jamal Bachar",
+  authors: [{ name: "Md. Shah Jamal Basar" }],
+  creator: "Md. Shah Jamal Basar",
   openGraph: {
     type: "website",
     locale: "en_US",
     url: "https://shah-jamal.vercel.app",
-    title: "Md. Shah Jamal Bachar | Business Portfolio",
+    title: "Md. Shah Jamal Basar | Business Portfolio",
     description:
-      "Official Business Portfolio of Md. Shah Jamal Bachar - Chairman, Entrepreneur & Philanthropist.",
-    siteName: "Md. Shah Jamal Bachar",
+      "Official Business Portfolio of Md. Shah Jamal Basar -  Entrepreneur & Philanthropist.",
+    siteName: "Md. Shah Jamal Basar",
     images: [
       {
         url: "/profileImage.png", // Using profile image as OG image for now
         width: 1200,
         height: 630,
-        alt: "Md. Shah Jamal Bachar",
+        alt: "Md. Shah Jamal Basar",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Md. Shah Jamal Bachar | Business Portfolio",
+    title: "Md. Shah Jamal Basar | Business Portfolio",
     description:
-      "Official Business Portfolio of Md. Shah Jamal Bachar - Chairman, Entrepreneur & Philanthropist.",
+      "Official Business Portfolio of Md. Shah Jamal Basar -  Entrepreneur & Philanthropist.",
     images: ["/profileImage.png"],
   },
   icons: {

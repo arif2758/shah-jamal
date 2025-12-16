@@ -10,15 +10,15 @@ export const DATA = {
     hero: {
       greeting: "Welcome to my Official Portfolio",
       name: "Md. Shah Jamal Basar",
-      title: "Entrepreneur | Philanthropist",
-      desc: "A dedicated business leader from a prestigious Muslim family in Bikrampur. Establishing trust through honesty and serving society with devotion.",
+      title: "Entrepreneur & Philanthropist",
+      desc: "A dedicated business leader from a prestigious Muslim family in Bikrampur. Honesty is the cornerstone of his path",
       cta: "View Portfolio",
     },
     about: {
       title: "Biography",
       born: "Born on March 17, 1979, in Vikrampur, Munshiganj.",
       family:
-        "Youngest of six brothers. Father: Late Dalil Uddin Bachar, Mother: Achia Begum. Spouse: Chaiti Akter Shikha.",
+        "Youngest of six brothers. Father: Late Dalil Uddin Basar, Mother: Achia Begum. Spouse: Chaiti Akter Shikha.",
       children: "Proud father of four daughters.",
       values:
         "A warm-hearted philanthropist with strong moral convictions. Recognized as an advocate for justice and equity. Guided by unwavering principles of honesty and integrity.",
@@ -68,8 +68,8 @@ export const DATA = {
     hero: {
       greeting: "অফিশিয়াল পোর্টফোলিওতে স্বাগতম",
       name: "মোঃ শাহ জামাল বাছার",
-      title: "বিশিষ্ট ব্যবসায়ী | সমাজসেবক",
-      desc: "বিক্রমপুরের সম্ভ্রান্ত মুসলিম পরিবারে জন্ম নেওয়া একজন সফল উদ্যোক্তা। সততাই আমার চলার পথের প্রধান শক্তি।",
+      title: "বিশিষ্ট ব্যবসায়ী ও সমাজসেবক",
+      desc: "বিক্রমপুরের সম্ভ্রান্ত মুসলিম পরিবারে জন্ম নেওয়া একজন সফল উদ্যোক্তা। সততাই যার চলার পথের প্রধান চালিকা শক্তি।",
       cta: "পোর্টফোলিও দেখুন",
     },
     about: {
@@ -255,7 +255,7 @@ export const DATA = {
         bn: "নির্মাণ কমিটির সভাপতি",
       },
       org: {
-        en: "Uttar Balashur Bachar Bari Jame Masjid",
+        en: "Uttar Balashur Basar Bari Jame Masjid",
         bn: "উত্তর বালাশুর বাছার বাড়ী জামে মসজিদ",
       },
     },

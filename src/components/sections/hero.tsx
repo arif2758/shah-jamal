@@ -141,7 +141,7 @@ export default function Hero() {
                   </span>
                 </h1>
 
-                <h2 className="text-center lg:text-left text-lg md:text-2xl font-medium text-muted-foreground pt-2">
+                <h2 className="!text-center lg:text-left text-lg md:text-2xl font-medium text-muted-foreground pt-2">
                   {t.title}
                 </h2>
               </div>
@@ -187,7 +187,7 @@ export default function Hero() {
                 <div className="absolute inset-0 flex items-center justify-center bg-muted/50 text-muted-foreground">
                   <Image
                     src="/profileImage.svg"
-                    alt="Md. Shah Jamal Bachar"
+                    alt="Md. Shah Jamal Basar"
                     fill
                     className="object-cover transition-transform hover:scale-105 duration-700"
                     priority

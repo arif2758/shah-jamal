@@ -2,13 +2,13 @@ export default function JsonLd() {
   const personSchema = {
     "@context": "https://schema.org",
     "@type": "Person",
-    name: "Md. Shah Jamal Bachar",
+    name: "Md. Shah Jamal Basar",
     url: "https://shah-jamal.vercel.app",
     image: "https://shah-jamal.vercel.app/profileImage.png",
     jobTitle: "Chairman",
     worksFor: {
       "@type": "Organization",
-      name: "Shah Jamal Bachar Trust", // Example, adjust as needed based on content
+      name: "Shah Jamal Basar Trust", // Example, adjust as needed based on content
     },
     sameAs: [
       // Add social links here if available in the future
