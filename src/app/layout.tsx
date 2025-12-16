@@ -3,7 +3,6 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Providers } from "@/components/providers";
 import JsonLd from "@/components/json-ld";
-import PwaRegistry from "@/components/pwa-registry";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -23,6 +22,9 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_APP_URL ?? "https://shah-jamal.vercel.app"
+  ),
   title: "Md. Shah Jamal Bachar | Business Portfolio",
   description:
     "Official Business Portfolio of Md. Shah Jamal Bachar - Chairman, Entrepreneur & Philanthropist. Leading Shah Jamal Bachar Trust and various successful ventures.",
@@ -85,7 +87,6 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <JsonLd />
-        <PwaRegistry />
         <Providers>{children}</Providers>
       </body>
     </html>
