@@ -46,6 +46,7 @@ export const DATA = {
       address: "Dhaka, Bangladesh",
       email: "dhakaoilsupply@gmail.com",
       phone: "+880 1712279928",
+      phoneAlt: "+880 1711964668",
       cta: "Send Message",
     },
     socialLinks: {
@@ -101,6 +102,7 @@ export const DATA = {
       address: "ঢাকা, বাংলাদেশ",
       email: "dhakaoilsupply@gmail.com",
       phone: "+৮৮০ ১৭১২২৭৯৯২৮",
+      phoneAlt: "+৮৮০ ১৭১১৯৬৪৬৬৮",
       cta: "বার্তা পাঠান",
     },
     socialLinks: {
@@ -260,8 +262,8 @@ export const DATA = {
     {
       role: { en: "Finance Secretary", bn: "অর্থ বিষয়ক সম্পাদক" },
       org: {
-        en: "Agrosor Bikrampur Foundation",
-        bn: "অগ্রসর বিক্রমপুর ফাউন্ডেশন",
+        en: "Agrosor Bikrampur Foundation (Sreenagar Branch)",
+        bn: "অগ্রসর বিক্রমপুর ফাউন্ডেশন (শ্রীনগর শাখা)",
       },
     },
     {

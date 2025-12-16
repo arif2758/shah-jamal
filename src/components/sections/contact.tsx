@@ -1,3 +1,4 @@
+// src/components/sections/contact.tsx
 "use client";
 
 import {
@@ -7,8 +8,8 @@ import {
   Send,
   ArrowRight,
   MessageCircle,
-  Loader2, // Added loader
-  type LucideIcon, // ✅ Import correct type
+  Loader2,
+  type LucideIcon,
 } from "lucide-react";
 import { DATA } from "@/lib/data";
 import { useLanguage } from "@/contexts/language-context";
@@ -62,25 +63,42 @@ export default function Contact() {
               </p>
             </div>
 
-            <div className="space-y-6">
+            <div className="space-y-4">
+              {/* Phone Numbers - Multiple with Badge */}
               <ContactCard
                 icon={Phone}
                 title={language === "en" ? "Call Us" : "মোবাইল"}
                 value={t.phone}
+                badge={language === "en" ? "Primary" : "প্রধান"}
+                badgeColor="bg-primary/10 text-primary"
                 href={`tel:${t.phone}`}
               />
+              
+              <ContactCard
+                icon={Phone}
+                title={language === "en" ? "Alternative" : "বিকল্প"}
+                value={t.phoneAlt}
+                badge={language === "en" ? "Secondary" : "বিকল্প"}
+                badgeColor="bg-orange-500/10 text-orange-600 dark:text-orange-500"
+                href={`tel:${t.phoneAlt}`}
+              />
+
               <ContactCard
                 icon={Mail}
                 title={language === "en" ? "Email Us" : "ইমেইল"}
                 value={t.email}
                 href={`mailto:${t.email}`}
               />
+              
               <ContactCard
                 icon={MessageCircle}
-                title={language === "en" ? "WhatsApp" : "হোয়াটসঅ্যাপ"}
+                title={language === "en" ? "WhatsApp" : "হোয়াটসঅ্যাপ"}
                 value={t.phone}
+                badge="WhatsApp"
+                badgeColor="bg-green-500/10 text-green-600 dark:text-green-500"
                 href={DATA.en.socialLinks.whatsapp}
               />
+              
               <ContactCard
                 icon={MapPin}
                 title={language === "en" ? "Visit Us" : "ঠিকানা"}
@@ -92,7 +110,7 @@ export default function Contact() {
           {/* Right Side: Form */}
           <div className="relative animate-in slide-in-from-right-6 duration-700 delay-200">
             {/* Gradient Glow */}
-            <div className="absolute -inset-1 bg-linear-to-br from-primary to-orange-400 rounded-3xl blur opacity-20" />
+            <div className="absolute -inset-1 bg-gradient-to-br from-primary to-orange-400 rounded-3xl blur opacity-20" />
 
             <div className="relative bg-white dark:bg-black/40 backdrop-blur-xl border border-border/50 rounded-3xl p-8 shadow-xl">
               <form onSubmit={handleSubmit} className="space-y-5">
@@ -177,30 +195,48 @@ export default function Contact() {
   );
 }
 
-// ✅ Fix: Use LucideIcon type instead of 'any'
+// ✅ Enhanced Contact Card with Badge Support
 interface ContactCardProps {
   icon: LucideIcon;
   title: string;
   value: string;
   href?: string;
+  badge?: string;
+  badgeColor?: string;
 }
 
-function ContactCard({ icon: Icon, title, value, href }: ContactCardProps) {
+function ContactCard({ 
+  icon: Icon, 
+  title, 
+  value, 
+  href,
+  badge,
+  badgeColor = "bg-muted text-muted-foreground"
+}: ContactCardProps) {
   const isExternal = href?.startsWith("http");
 
   const Content = (
-    <div className="flex items-center gap-4 p-4 rounded-2xl bg-white dark:bg-white/5 border border-border/50 hover:border-primary/50 transition-colors group cursor-pointer">
-      <div className="flex items-center justify-center size-12 rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+    <div className="flex items-center gap-4 p-4 rounded-2xl bg-white dark:bg-white/5 border border-border/50 hover:border-primary/50 transition-all duration-300 group cursor-pointer hover:shadow-md">
+      <div className="flex items-center justify-center size-12 rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300 shrink-0">
         <Icon className="size-6" />
       </div>
-      <div>
-        <p className="text-xs font-bold text-muted-foreground uppercase tracking-wider">
-          {title}
+      <div className="flex-1 min-w-0">
+        <div className="flex items-center gap-2 mb-1">
+          <p className="text-xs font-bold text-muted-foreground uppercase tracking-wider">
+            {title}
+          </p>
+          {badge && (
+            <span className={`text-[10px] font-semibold px-2 py-0.5 rounded-full ${badgeColor}`}>
+              {badge}
+            </span>
+          )}
+        </div>
+        <p className="text-base md:text-lg font-medium text-foreground truncate">
+          {value}
         </p>
-        <p className="text-lg font-medium text-foreground">{value}</p>
       </div>
       {href && (
-        <ArrowRight className="ml-auto size-5 text-muted-foreground group-hover:text-primary transition-colors" />
+        <ArrowRight className="size-5 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 transition-all duration-300 shrink-0" />
       )}
     </div>
   );
