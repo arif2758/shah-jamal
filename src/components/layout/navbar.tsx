@@ -6,7 +6,7 @@ import Image from "next/image";
 import {
   Menu,
   X,
-  House,
+  House, // Home icon
   User,
   Building2,
   HeartHandshake,
