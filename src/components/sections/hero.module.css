@@ -1,0 +1,37 @@
+/* Float Animation (Wave Effect) */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-12px); /* নড়াচড়ার পরিমাণ */
+  }
+}
+
+.animateFloat {
+  /* 4s duration for smoother, slower wave */
+  animation: float 4s ease-in-out infinite; 
+}
+
+/* Fade In Up (For entry) */
+.fadeInUp {
+  opacity: 0;
+  animation: fadeInUpAnimation 0.8s ease-out forwards;
+}
+
+@keyframes fadeInUpAnimation {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Entry Delays */
+.delay1 { animation-delay: 0.2s; }
+.delay2 { animation-delay: 0.4s; }
+.delay3 { animation-delay: 0.6s; }
+.delay4 { animation-delay: 0.8s; }

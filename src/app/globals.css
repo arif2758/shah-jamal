@@ -1,15 +1,13 @@
+
 @import "tailwindcss";
 @import "tw-animate-css";
-
-/* Tailwind CSS v4 Plugin Setup (If using plugin directive) */
-/* @plugin "tailwindcss-animate"; */
 
 @custom-variant dark (&:is(.dark *));
 
 :root {
   /* OKLCH Color Palette - Light Mode */
-  --background: oklch(0.985 0.002 247.839); /* Soft White */
-  --foreground: oklch(0.145 0.02 260); /* Deep Navy/Black */
+  --background: oklch(0.99 0.002 247.839); /* Pure White */
+  --foreground: oklch(0.145 0.02 260); /* Deep Navy */
 
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0.02 260);
@@ -17,65 +15,67 @@
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0.02 260);
 
-  /* ✅ Primary: Vibrant Coral/Orange (#f06b4b equivalent) */
-  --primary: oklch(0.65 0.18 25); 
-  --primary-foreground: oklch(0.985 0 0);
+  /* ✅ PRIMARY: Professional Blue (Google-like #1a73e8) */
+  --primary: oklch(0.58 0.18 250); /* Rich Blue */
+  --primary-foreground: oklch(0.99 0 0); /* White text */
 
-  --secondary: oklch(0.96 0.01 260);
-  --secondary-foreground: oklch(0.205 0.05 260);
+  /* SECONDARY: Lighter Blue for accents */ 
+  --secondary: oklch(0.95 0.02 240);
+  --secondary-foreground: oklch(0.25 0.05 250);
 
-  --muted: oklch(0.96 0.01 260);
-  --muted-foreground: oklch(0.55 0.03 260);
+  --muted: oklch(0.96 0.01 240);
+  --muted-foreground: oklch(0.55 0.03 240);
 
-  --accent: oklch(0.96 0.01 260);
-  --accent-foreground: oklch(0.205 0.05 260);
+  /* ACCENT: Cyan/Indigo for CTAs */
+  --accent: oklch(0.92 0.03 240);
+  --accent-foreground: oklch(0.25 0.08 250);
 
-  --destructive: oklch(0.6 0.18 25);
-  --destructive-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.58 0.18 25); /* Red for errors */
+  --destructive-foreground: oklch(0.99 0 0);
 
-  --border: oklch(0.92 0.01 260);
-  --input: oklch(0.92 0.01 260);
-  --ring: oklch(0.65 0.18 25); /* Matches Primary */
-  --radius: 0.75rem;
+  --border: oklch(0.93 0.01 240);
+  --input: oklch(0.93 0.01 240);
+  --ring: oklch(0.58 0.18 250); /* Matches Primary */
+  --radius: 0.625rem; /* 10px - Modern rounded corners */
 
-  /* Chart Colors (Useful for any future charts) */
-  --chart-1: oklch(0.65 0.18 25);
-  --chart-2: oklch(0.65 0.18 150);
-  --chart-3: oklch(0.65 0.18 200);
-  --chart-4: oklch(0.7 0.15 80);
-  --chart-5: oklch(0.6 0.15 300);
+  /* Chart Colors */
+  --chart-1: oklch(0.58 0.18 250); /* Blue */
+  --chart-2: oklch(0.65 0.15 200); /* Cyan */
+  --chart-3: oklch(0.62 0.16 280); /* Indigo */
+  --chart-4: oklch(0.68 0.14 150); /* Teal */
+  --chart-5: oklch(0.60 0.12 300); /* Purple */
 }
 
 .dark {
   /* OKLCH Color Palette - Dark Mode */
-  --background: oklch(0.0699 0 0); /* Deep Dark Blue/Gray */
-  --foreground: oklch(0.985 0.005 260);
+  --background: oklch(0.09 0.01 260); /* Deep Dark Blue */
+  --foreground: oklch(0.98 0.005 240);
 
-  --card: oklch(0.16 0.02 260);
-  --card-foreground: oklch(0.985 0.005 260);
+  --card: oklch(0.14 0.015 260);
+  --card-foreground: oklch(0.98 0.005 240);
 
-  --popover: oklch(0.16 0.02 260);
-  --popover-foreground: oklch(0.985 0.005 260);
+  --popover: oklch(0.14 0.015 260);
+  --popover-foreground: oklch(0.98 0.005 240);
 
-  /* ✅ Primary Dark Mode: Slightly Lighter Coral */
-  --primary: oklch(0.72 0.18 25);
-  --primary-foreground: oklch(0.12 0.02 260);
+  /* ✅ PRIMARY Dark Mode: Brighter Blue for contrast */
+  --primary: oklch(0.68 0.18 250);
+  --primary-foreground: oklch(0.09 0.01 260);
 
-  --secondary: oklch(0.22 0.03 260);
-  --secondary-foreground: oklch(0.985 0.005 260);
+  --secondary: oklch(0.20 0.03 250);
+  --secondary-foreground: oklch(0.98 0.005 240);
 
-  --muted: oklch(0.22 0.03 260);
-  --muted-foreground: oklch(0.7 0.04 260);
+  --muted: oklch(0.20 0.02 250);
+  --muted-foreground: oklch(0.68 0.04 240);
 
-  --accent: oklch(0.22 0.03 260);
-  --accent-foreground: oklch(0.985 0.005 260);
+  --accent: oklch(0.22 0.04 250);
+  --accent-foreground: oklch(0.98 0.005 240);
 
-  --destructive: oklch(0.6 0.18 25);
-  --destructive-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.62 0.18 25);
+  --destructive-foreground: oklch(0.98 0 0);
 
-  --border: oklch(0.22 0.03 260);
-  --input: oklch(0.22 0.03 260);
-  --ring: oklch(0.72 0.18 25);
+  --border: oklch(0.22 0.025 250);
+  --input: oklch(0.22 0.025 250);
+  --ring: oklch(0.68 0.18 250);
 }
 
 @theme inline {
@@ -98,34 +98,49 @@
   --color-input: var(--input);
   --color-ring: var(--ring);
 
-  --radius-sm: calc(var(--radius) - 4px);
-  --radius-md: calc(var(--radius) - 2px);
-  --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) + 4px);
-  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-sm: calc(var(--radius) - 2px);
+  --radius-md: var(--radius);
+  --radius-lg: calc(var(--radius) + 2px);
+  --radius-xl: calc(var(--radius) + 6px);
+  --radius-2xl: calc(var(--radius) + 10px);
 
-  /* Custom Animations */
-  --animate-fade-in: fadeIn 0.5s ease-out;
-  --animate-slide-up: slideUp 0.5s ease-out;
-  --animate-slide-in-from-bottom: slideInFromBottom 0.5s ease-out;
+  /* Enhanced Animations */
+  --animate-fade-in: fadeIn 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  --animate-slide-up: slideUp 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  --animate-slide-in-from-bottom: slideInFromBottom 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   --animate-accordion-down: accordion-down 0.2s ease-out;
   --animate-accordion-up: accordion-up 0.2s ease-out;
+  --animate-shimmer: shimmer 2s infinite;
 
   @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
   }
+
   @keyframes slideInFromBottom {
-    from { transform: translateY(20px); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
   }
+
   @keyframes accordion-down {
     from { height: 0; }
     to { height: var(--radix-accordion-content-height); }
   }
+
   @keyframes accordion-up {
     from { height: var(--radix-accordion-content-height); }
     to { height: 0; }
+  }
+
+  @keyframes shimmer {
+    0% { background-position: -1000px 0; }
+    100% { background-position: 1000px 0; }
   }
 }
 
@@ -133,24 +148,78 @@
   * {
     @apply border-border outline-ring/50;
   }
+  
   body {
-    @apply bg-background text-foreground antialiased selection:bg-primary/20 selection:text-primary tracking-tight scroll-smooth;
+    @apply bg-background text-foreground antialiased 
+           selection:bg-primary/20 selection:text-primary 
+           tracking-tight scroll-smooth;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  /* Professional Typography */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold tracking-tight text-foreground;
   }
 }
 
 @layer utilities {
-  /* Glassmorphism Utility */
-  .glass {
-    @apply bg-white/70 dark:bg-black/70 backdrop-blur-md border border-white/20 dark:border-white/10 shadow-sm;
-  }
-
-  /* Your Requested Premium Card Effect */
+  /* ✅ Professional Glass Card (Stripe/Linear-like) */
   .glass-card {
-    @apply bg-white/50 dark:bg-white/5 backdrop-blur-xl border border-white/60 dark:border-white/10 transition-all duration-300 hover:shadow-xl;
+    @apply bg-white/80 dark:bg-white/5 
+           backdrop-blur-xl backdrop-saturate-150
+           border border-border/50 
+           rounded-lg
+           shadow-sm hover:shadow-lg
+           transition-all duration-300
+           hover:border-primary/30;
   }
 
-  /* Gradient Text Utility */
+  /* Premium Glassmorphism */
+  .glass {
+    @apply bg-white/60 dark:bg-black/40 
+           backdrop-blur-md 
+           border border-white/30 dark:border-white/10 
+           shadow-lg;
+  }
+
+  /* ✅ Professional Blue Gradient Text */
   .text-gradient {
-    @apply bg-gradient-to-br from-primary to-orange-500 bg-clip-text text-transparent;
+    @apply bg-gradient-to-br from-primary via-blue-600 to-indigo-600 
+           bg-clip-text text-transparent;
+  }
+
+  /* Modern Blue Gradient Background */
+  .gradient-bg {
+    @apply bg-gradient-to-br from-blue-50 via-indigo-50 to-sky-50
+           dark:from-blue-950/20 dark:via-indigo-950/20 dark:to-sky-950/20;
+  }
+
+  /* Premium Button Hover Effect */
+  .btn-premium {
+    @apply bg-primary text-primary-foreground 
+           px-6 py-3 rounded-lg font-medium
+           shadow-md hover:shadow-xl
+           transition-all duration-300
+           hover:scale-105 hover:bg-primary/90
+           active:scale-95;
+  }
+
+  /* Shimmer Loading Effect */
+  .shimmer {
+    @apply bg-gradient-to-r from-muted via-muted-foreground/10 to-muted
+           bg-[length:1000px_100%]
+           animate-[shimmer_2s_infinite];
+  }
+
+  /* Professional Card Grid */
+  .card-grid {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 
+           gap-6 auto-rows-fr;
+  }
+
+  /* Smooth Hover Lift */
+  .hover-lift {
+    @apply transition-transform duration-300 
+           hover:-translate-y-1 hover:shadow-lg;
   }
 }

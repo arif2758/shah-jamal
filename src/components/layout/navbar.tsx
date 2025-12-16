@@ -3,14 +3,14 @@
 import { useEffect, useState, useMemo } from "react";
 import Link from "next/link";
 import Image from "next/image"; // ✅ Import Image
-import { 
-  Menu, 
-  X, 
-  Home, 
-  User, 
-  Briefcase, 
-  HeartHandshake, 
-  Phone 
+import {
+  Menu,
+  X,
+  Home,
+  User,
+  Briefcase,
+  HeartHandshake,
+  Phone,
 } from "lucide-react";
 import { ModeToggle } from "@/components/mode-toggle";
 import { useLanguage } from "@/contexts/language-context";
@@ -29,13 +29,21 @@ export default function Navbar() {
   const t = DATA[language].nav;
 
   // ✅ FIX: Wrap navItems in useMemo to prevent unnecessary re-renders
-  const navItems = useMemo(() => [
-    { key: "home", label: t.home, href: "#home", icon: Home },
-    { key: "about", label: t.about, href: "#about", icon: User },
-    { key: "business", label: t.business, href: "#business", icon: Briefcase },
-    { key: "social", label: t.social, href: "#social", icon: HeartHandshake },
-    { key: "contact", label: t.contact, href: "#contact", icon: Phone },
-  ], [t]); // Dependency is 't' (translation), so it updates only when language changes
+  const navItems = useMemo(
+    () => [
+      { key: "home", label: t.home, href: "#home", icon: Home },
+      { key: "about", label: t.about, href: "#about", icon: User },
+      {
+        key: "business",
+        label: t.business,
+        href: "#business",
+        icon: Briefcase,
+      },
+      { key: "social", label: t.social, href: "#social", icon: HeartHandshake },
+      { key: "contact", label: t.contact, href: "#contact", icon: Phone },
+    ],
+    [t]
+  ); // Dependency is 't' (translation), so it updates only when language changes
 
   // ScrollSpy & Glassmorphism Trigger
   useEffect(() => {
@@ -69,7 +77,9 @@ export default function Navbar() {
         isScrolled
           ? "bg-background/70 backdrop-blur-xl border-border/40 shadow-sm supports-backdrop-filter:bg-background/60"
           : "bg-transparent",
-        scrollDirection === "down" && isScrolled ? "-translate-y-full" : "translate-y-0"
+        scrollDirection === "down" && isScrolled
+          ? "-translate-y-full"
+          : "translate-y-0"
       )}
     >
       <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
@@ -80,10 +90,10 @@ export default function Navbar() {
         >
           {/* ✅ Logo Image Update */}
           <div className="relative h-18 w-18 overflow-hidden rounded-lg">
-            <Image 
-              src="/logo.svg" 
-              alt="Logo" 
-              fill 
+            <Image
+              src="/logo.svg"
+              alt="Logo"
+              fill
               className="object-contain"
               priority
             />
@@ -91,9 +101,6 @@ export default function Navbar() {
           <div className="hidden md:flex flex-col leading-none">
             <span className="text-lg font-bold tracking-tight text-primary">
               Shah Jamal
-            </span>
-            <span className="text-[10px] font-medium text-muted-foreground tracking-widest uppercase">
-              Bachar
             </span>
           </div>
         </Link>
@@ -114,7 +121,12 @@ export default function Navbar() {
                     : "text-muted-foreground hover:bg-accent hover:text-foreground"
                 )}
               >
-                <Icon className={cn("h-4 w-4 transition-transform group-hover:scale-110", isActive && "fill-current")} />
+                <Icon
+                  className={cn(
+                    "h-4 w-4 transition-transform group-hover:scale-110",
+                    isActive && "fill-current"
+                  )}
+                />
                 {item.label}
               </Link>
             );
@@ -154,9 +166,9 @@ export default function Navbar() {
         <div className="absolute inset-x-0 top-16 border-b border-border/40 bg-background/95 backdrop-blur-xl md:hidden animate-in slide-in-from-top-5 shadow-xl">
           <nav className="container flex flex-col gap-2 p-4">
             {navItems.map((item) => {
-               const Icon = item.icon;
-               const isActive = activeSection === item.key;
-               return (
+              const Icon = item.icon;
+              const isActive = activeSection === item.key;
+              return (
                 <Link
                   key={item.key}
                   href={item.href}
@@ -171,7 +183,7 @@ export default function Navbar() {
                   <Icon className="h-5 w-5" />
                   {item.label}
                 </Link>
-              )
+              );
             })}
           </nav>
         </div>

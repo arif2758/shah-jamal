@@ -10,7 +10,7 @@ export const DATA = {
     hero: {
       greeting: "Welcome to my Official Portfolio",
       name: "Md. Shah Jamal Bachar",
-      title: "Chairman | Entrepreneur | Philanthropist",
+      title: "Entrepreneur | Philanthropist",
       desc: "A dedicated business leader from a prestigious Muslim family in Bikrampur. Establishing trust through honesty and serving society with devotion.",
       cta: "View Portfolio",
     },
@@ -59,7 +59,7 @@ export const DATA = {
     hero: {
       greeting: "অফিশিয়াল পোর্টফোলিওতে স্বাগতম",
       name: "মোঃ শাহ জামাল বাছার",
-      title: "চেয়ারম্যান | বিশিষ্ট ব্যবসায়ী | সমাজসেবক",
+      title: "বিশিষ্ট ব্যবসায়ী | সমাজসেবক",
       desc: "বিক্রমপুরের সম্ভ্রান্ত মুসলিম পরিবারে জন্ম নেওয়া একজন সফল উদ্যোক্তা। সততাই আমার চলার পথের প্রধান শক্তি।",
       cta: "পোর্টফোলিও দেখুন",
     },
@@ -158,7 +158,7 @@ export const DATA = {
       icon: "Navigation",
     },
     {
-      name: { en: "BK Convention Hall", bn: "বিকে কনভেনশন হল" },
+      name: { en: "B.K Convention Hall", bn: "বি.কে কনভেনশন হল" },
       role: "Partner",
       type: "Default",
       icon: "Building",
