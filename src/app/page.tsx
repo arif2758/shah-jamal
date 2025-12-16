@@ -3,10 +3,10 @@ import Hero from "@/components/sections/hero";
 
 import About from "@/components/sections/about";
 
-import Footer from "@/components/sections/footer";
 import Social from "@/components/sections/social-work";
 import BusinessSection from "@/components/sections/business-showcase";
 import Contact from "@/components/sections/contact";
+import Footer from "@/components/layout/footer";
 
 export default function Home() {
   return (
@@ -14,7 +14,6 @@ export default function Home() {
       <Navbar />
       <Hero />
       <BusinessSection />
-
       <Social />
       <About />
       <Contact />

@@ -48,6 +48,13 @@ export const DATA = {
       phone: "+880 1712279928",
       cta: "Send Message",
     },
+    socialLinks: {
+      facebook: "https://www.facebook.com/shah.jamal.1690", // Replace with actual link
+      whatsapp: "https://wa.me/8801712279928",
+      imo: "tel:+8801712279928", // Imo usually works by number, or specific link if available
+      telegram: "https://t.me/8801712279928",
+      x: "https://x.com/shahjamal",
+    },
   },
   bn: {
     nav: {
@@ -95,6 +102,13 @@ export const DATA = {
       email: "dhakaoilsupply@gmail.com",
       phone: "+৮৮০ ১৭১২২৭৯৯২৮",
       cta: "বার্তা পাঠান",
+    },
+    socialLinks: {
+      facebook: "https://facebook.com", // Replace
+      whatsapp: "https://wa.me/8801712279928",
+      imo: "tel:+8801712279928",
+      telegram: "https://t.me/shahjamal", // Placeholder
+      x: "https://x.com/shahjamal", // Placeholder
     },
   },
 
