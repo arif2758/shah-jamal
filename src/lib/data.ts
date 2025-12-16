@@ -8,7 +8,7 @@ export const DATA = {
       contact: "Contact",
     },
     hero: {
-      greeting: "Welcome to my Official Portfolio", 
+      greeting: "Welcome to my Official Portfolio",
       name: "Md. Shah Jamal Basar",
       title: "Entrepreneur | Philanthropist",
       desc: "A dedicated business leader from a prestigious Muslim family in Bikrampur. Establishing trust through honesty and serving society with devotion.",
@@ -287,7 +287,7 @@ export const STATS_DATA = [
     icon: "Building",
   },
   {
-    value: "30+",
+    value: "200+",
     label: { en: "Employees", bn: "কর্মসংস্থান সৃষ্টি" },
     icon: "Users",
   },

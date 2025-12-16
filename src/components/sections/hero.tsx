@@ -135,10 +135,6 @@ export default function Hero() {
               )}
             >
               <div className="space-y-1 w-full">
-                <span className="text-foreground text-lg md:text-2xl font-semibold block mb-1">
-                  {language === "en" ? "I'm" : "আমি"}
-                </span>
-
                 <h1 className="text-3xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold tracking-tighter leading-tight lg:leading-none lg:whitespace-nowrap">
                   <span className="bg-linear-to-r from-primary to-orange-600 bg-clip-text text-transparent">
                     {t.name}
