@@ -312,37 +312,7 @@ export const DATA = {
   // ✅ Bilingual Timeline
   timeline: [
     {
-      year: "2024",
-      title: { en: "Awarded Best Entrepreneur", bn: "সেরা উদ্যোক্তা পুরস্কার" },
-      desc: {
-        en: "Recognized for outstanding contribution to the transport sector.",
-        bn: "পরিবহন খাতে অসামান্য অবদানের জন্য স্বীকৃত।",
-      },
-    },
-    {
-      year: "2020",
-      title: {
-        en: "Founded Vision Tour & Travels",
-        bn: "ভিশন টুর এন্ড ট্রাভেলস প্রতিষ্ঠা",
-      },
-      desc: {
-        en: "Expanded business into the tourism industry.",
-        bn: "পর্যটন শিল্পে ব্যবসা সম্প্রসারণ।",
-      },
-    },
-    {
-      year: "2015",
-      title: {
-        en: "Partnership with Oil Companies",
-        bn: "তৈল কোম্পানিগুলোর সাথে অংশীদারিত্ব",
-      },
-      desc: {
-        en: "Became authorized dealer for Padma and Meghna Oil.",
-        bn: "পদ্মা ও মেঘনা অয়েলের অনুমোদিত ডিলার হিসেবে নিযুক্ত।",
-      },
-    },
-    {
-      year: "2010",
+      year: "2018",
       title: {
         en: "Established Dhaka Marine Ltd.",
         bn: "ঢাকা মেরিন লিমিটেড প্রতিষ্ঠা",
@@ -353,7 +323,30 @@ export const DATA = {
       },
     },
     {
-      year: "2005",
+      year: "2010",
+      title: {
+        en: "Founded Vision Tour & Travels",
+        bn: "ভিশন টুর এন্ড ট্রাভেলস প্রতিষ্ঠা",
+      },
+      desc: {
+        en: "Expanded business into the tourism industry.",
+        bn: "পর্যটন শিল্পে ব্যবসা সম্প্রসারণ।",
+      },
+    },
+    {
+      year: "2008",
+      title: {
+        en: "Partnership with Oil Companies",
+        bn: "তৈল কোম্পানিগুলোর সাথে অংশীদারিত্ব",
+      },
+      desc: {
+        en: "Became authorized dealer for Padma and Meghna Oil.",
+        bn: "পদ্মা ও মেঘনা অয়েলের অনুমোদিত ডিলার হিসেবে নিযুক্ত।",
+      },
+    },
+
+    {
+      year: "2000",
       title: { en: "Business Inception", bn: "ব্যবসার সূচনা" },
       desc: {
         en: "Started career as a young entrepreneur.",
@@ -365,15 +358,15 @@ export const DATA = {
   // ✅ Bilingual Testimonials
   testimonials: [
     {
-      name: { en: "Abdul Karim", bn: "আব্দুল করিম" },
-      role: { en: "CEO, Local Group", bn: "সিইও, লোকাল গ্রুপ" },
+      name: { en: "Md. Arif Hasan", bn: "মুহ. আরিফ হাসান" },
+      role: { en: "CEO, MEST School", bn: "CEO, MEST School" },
       text: {
         en: "Mr. Shah Jamal is a visionary leader with exceptional integrity.",
-        bn: "জনাব শাহ জামাল একজন দূরদর্শী নেতা এবং অসাধারণ সততার অধিকারী।",
+        bn: "জনাব শাহ জামাল একজন দূরদর্শী নেতা, সমাজ সেবক এবং অসাধারণ সততার অধিকারী।",
       },
     },
     {
-      name: { en: "Rahim Uddin", bn: "রহিম উদ্দিন" },
+      name: { en: "Bellal Hosain", bn: "বেলাল হোসেন" },
       role: { en: "Business Partner", bn: "ব্যবসায়িক অংশীদার" },
       text: {
         en: "Working with him has been a transformative experience for our company.",
@@ -381,8 +374,8 @@ export const DATA = {
       },
     },
     {
-      name: { en: "Kamal Hossain", bn: "কামাল হোসেন" },
-      role: { en: "Community Leader", bn: "কমিউনিটি লিডার" },
+      name: { en: "Ratul Islam", bn: "রাতুল ইসলাম" },
+      role: { en: "Community Leader", bn: "কমিউনিটি লিডার" }, 
       text: {
         en: "He is a pillar of our community, always ready to help.",
         bn: "তিনি আমাদের সম্প্রদায়ের একজন স্তম্ভ, সবসময় সাহায্যের জন্য প্রস্তুত।",
