@@ -121,18 +121,24 @@ export const DATA = {
       role: "Chairman",
       type: "Marine",
       icon: "Anchor",
+      image:
+        "https://images.unsplash.com/photo-1583326187695-01fb3e059569?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fE1hcmluZXxlbnwwfHwwfHx8MA%3D%3D",
     },
     {
       name: { en: "Dhaka Marine Dock Yard", bn: "ঢাকা মেরিন ডক ইয়ার্ড" },
       role: "Proprietor",
       type: "Marine",
-      icon: "Ship",
+      icon: "Wrench",
+      image:
+        "https://plus.unsplash.com/premium_photo-1667239486856-88fe8f814b0c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mzl8fGRvY2t5YXJkfGVufDB8fDB8fHww",
     },
     {
       name: { en: "Dhaka Oil Suppliers", bn: "ঢাকা অয়েল সাপ্লায়ার্স" },
       role: "Proprietor",
       type: "Energy",
-      icon: "Droplet",
+      icon: "Fuel",
+      image:
+        "https://images.unsplash.com/photo-1614555283386-f86c91585523?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjJ8fE9pbCUyMHNoaXAlMjB0YW5rZXJ8ZW58MHx8MHx8fDA%3D",
     },
     {
       name: {
@@ -143,48 +149,64 @@ export const DATA = {
       sub: { en: "Protocol Agency", bn: "প্রটোকল এজেন্সি" },
       type: "Marine",
       icon: "Compass",
+      image:
+        "https://images.unsplash.com/photo-1749815059175-471d2b59e771?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjh8fFNoaXAlMjBhZ2VuY3l8ZW58MHx8MHx8fDA%3D",
     },
     {
       name: { en: "Achia Shipping Lines", bn: "আছিয়া শিপিং লাইন্স" },
       role: "Proprietor",
       type: "Marine",
       icon: "ShipWheel",
+      image:
+        "https://images.unsplash.com/photo-1575528941322-c74397246f19?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8Y2FyZ28lMjBzaGlwfGVufDB8fDB8fHww",
     },
     {
       name: { en: "Vision Tour & Travels", bn: "ভিশন টুর এন্ড ট্রাভেলস" },
       role: "Proprietor",
       type: "Travel",
       icon: "Plane",
+      image:
+        "https://images.unsplash.com/photo-1582005450386-52b25f82d9bb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjR8fGFnZW5jeXxlbnwwfHwwfHx8MA%3D%3D",
     },
     {
       name: { en: "Click Travel BD", bn: "ক্লিক ট্রাভেল বিডি" },
       role: "Proprietor",
       type: "Travel",
       icon: "Ticket",
+      image:
+        "https://images.unsplash.com/photo-1530521954074-e64f6810b32d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8dHJhdmVsJTIwYWdlbmN5fGVufDB8fDB8fHww",
     },
     {
       name: { en: "Ruma Enterprise", bn: "রুমা এন্টার প্রাইজ" },
       role: "Partner",
       type: "Default",
       icon: "Briefcase",
+      image:
+        "https://images.unsplash.com/photo-1552207802-77bcb0d13122?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTA0fHxjYXJnbyUyMHNoaXB8ZW58MHx8MHx8fDA%3D",
     },
     {
       name: { en: "Belayet Navigation", bn: "বেলায়েত নেভিগেশন" },
       role: "Partner",
       type: "Marine",
       icon: "Navigation",
+      image:
+        "https://images.unsplash.com/photo-1608490478262-5c65dafeab08?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTEwfHxjYXJnbyUyMHNoaXB8ZW58MHx8MHx8fDA%3D",
     },
     {
       name: { en: "B.K Convention Hall", bn: "বি.কে কনভেনশন হল" },
       role: "Partner",
       type: "Default",
       icon: "Building",
+      image:
+        "https://images.unsplash.com/photo-1702774273891-a1ce9a30b593?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzV8fGNvbnZlbnRpb24lMjBoYWxsfGVufDB8fDB8fHww",
     },
     {
       name: { en: "B Mart Super Shop", bn: "বি মার্ট সুপার শপ" },
       role: "Partner",
       type: "Retail",
       icon: "ShoppingBasket",
+      image:
+        "https://images.unsplash.com/photo-1526152505827-d2f3b5b4a52a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fHJldGFpbHxlbnwwfHwwfHx8MA%3D%3D",
     },
     {
       name: {
@@ -193,25 +215,33 @@ export const DATA = {
       },
       role: "Local Agent",
       type: "Marine",
-      icon: "Container",
+      icon: "Factory",
+      image:
+        "https://images.unsplash.com/photo-1564035105455-6ca5c8aa4786?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fHNoaXBpbmclMjB0cmFkZXJzfGVufDB8fDB8fHww",
     },
     {
       name: { en: "Padma Oil", bn: "পদ্মা অয়েল" },
       role: "Dealer",
       type: "Energy",
       icon: "Fuel",
+      image:
+        "https://images.unsplash.com/photo-1763667974765-f0547fc8d96e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fE9pbCUyMFRhbmtlciUyMHNoaXB8ZW58MHx8MHx8fDA%3D",
     },
     {
       name: { en: "Meghna Oil", bn: "মেঘনা অয়েল" },
       role: "Dealer",
       type: "Energy",
       icon: "Fuel",
+      image:
+        "https://images.unsplash.com/photo-1687276740103-660a6a34bb67?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8T2lsJTIwVGFua2VyJTIwc2hpcHxlbnwwfHwwfHx8MA%3D%3D",
     },
     {
       name: { en: "Apex Shoe Company", bn: "এপেক্স সু কোম্পানি" },
       role: "Dealer",
       type: "Retail",
       icon: "Footprints",
+      image:
+        "https://images.unsplash.com/photo-1633464129147-777bdcc97c1d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8U2hvZXMlMjBzaG9wfGVufDB8fDB8fHww",
     },
   ],
 
@@ -241,6 +271,7 @@ export const DATA = {
         en: "Uttar Balashur Adarsha Koborsthan",
         bn: "উত্তর বালাশুর আদর্শ কবর স্থান",
       },
+      category: "Community",
     },
     {
       role: { en: "Life Donor Member", bn: "আজীবন দাতা সদস্য" },
@@ -248,6 +279,7 @@ export const DATA = {
         en: "Uttar Balashur Kashemul Ulum Madrasa",
         bn: "উত্তর বালাশুর কাসেমুল উলুম মাদ্রাসা",
       },
+      category: "Education",
     },
     {
       role: {
@@ -258,6 +290,7 @@ export const DATA = {
         en: "Uttar Balashur Basar Bari Jame Masjid",
         bn: "উত্তর বালাশুর বাছার বাড়ী জামে মসজিদ",
       },
+      category: "Religious",
     },
     {
       role: { en: "Finance Secretary", bn: "অর্থ বিষয়ক সম্পাদক" },
@@ -265,12 +298,94 @@ export const DATA = {
         en: "Agrosor Bikrampur Foundation (Sreenagar Branch)",
         bn: "অগ্রসর বিক্রমপুর ফাউন্ডেশন (শ্রীনগর শাখা)",
       },
+      category: "Social",
     },
     {
       role: { en: "Founder President", bn: "প্রতিষ্ঠাতা সভাপতি" },
       org: {
         en: "Uttam Balashur Football Club",
         bn: "উত্তম বালাশুর ফুটবল ক্লাব",
+      },
+      category: "Sports",
+    },
+  ],
+  // ✅ Bilingual Timeline
+  timeline: [
+    {
+      year: "2024",
+      title: { en: "Awarded Best Entrepreneur", bn: "সেরা উদ্যোক্তা পুরস্কার" },
+      desc: {
+        en: "Recognized for outstanding contribution to the transport sector.",
+        bn: "পরিবহন খাতে অসামান্য অবদানের জন্য স্বীকৃত।",
+      },
+    },
+    {
+      year: "2020",
+      title: {
+        en: "Founded Vision Tour & Travels",
+        bn: "ভিশন টুর এন্ড ট্রাভেলস প্রতিষ্ঠা",
+      },
+      desc: {
+        en: "Expanded business into the tourism industry.",
+        bn: "পর্যটন শিল্পে ব্যবসা সম্প্রসারণ।",
+      },
+    },
+    {
+      year: "2015",
+      title: {
+        en: "Partnership with Oil Companies",
+        bn: "তৈল কোম্পানিগুলোর সাথে অংশীদারিত্ব",
+      },
+      desc: {
+        en: "Became authorized dealer for Padma and Meghna Oil.",
+        bn: "পদ্মা ও মেঘনা অয়েলের অনুমোদিত ডিলার হিসেবে নিযুক্ত।",
+      },
+    },
+    {
+      year: "2010",
+      title: {
+        en: "Established Dhaka Marine Ltd.",
+        bn: "ঢাকা মেরিন লিমিটেড প্রতিষ্ঠা",
+      },
+      desc: {
+        en: "Started the journey in the marine transport sector.",
+        bn: "মেরিন পরিবহন খাতে যাত্রা শুরু।",
+      },
+    },
+    {
+      year: "2005",
+      title: { en: "Business Inception", bn: "ব্যবসার সূচনা" },
+      desc: {
+        en: "Started career as a young entrepreneur.",
+        bn: "তরুণ উদ্যোক্তা হিসেবে কর্মজীবন শুরু।",
+      },
+    },
+  ],
+
+  // ✅ Bilingual Testimonials
+  testimonials: [
+    {
+      name: { en: "Abdul Karim", bn: "আব্দুল করিম" },
+      role: { en: "CEO, Local Group", bn: "সিইও, লোকাল গ্রুপ" },
+      text: {
+        en: "Mr. Shah Jamal is a visionary leader with exceptional integrity.",
+        bn: "জনাব শাহ জামাল একজন দূরদর্শী নেতা এবং অসাধারণ সততার অধিকারী।",
+      },
+    },
+    {
+      name: { en: "Rahim Uddin", bn: "রহিম উদ্দিন" },
+      role: { en: "Business Partner", bn: "ব্যবসায়িক অংশীদার" },
+      text: {
+        en: "Working with him has been a transformative experience for our company.",
+        bn: "তাঁর সাথে কাজ করা আমাদের কোম্পানির জন্য একটি পরিবর্তনমূলক অভিজ্ঞতা ছিল।",
+      },
+    },
+    {
+      name: { en: "Kamal Hossain", bn: "কামাল হোসেন" },
+      role: { en: "Community Leader", bn: "কমিউনিটি লিডার" },
+      text: {
+        en: "He is a pillar of our community, always ready to help.",
+        bn: "তিনি আমাদের সম্প্রদায়ের একজন স্তম্ভ, সবসময় সাহায্যের জন্য প্রস্তুত।",
       },
     },
   ],

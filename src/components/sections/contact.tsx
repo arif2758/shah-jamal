@@ -18,6 +18,8 @@ import { useState } from "react";
 import { toast } from "sonner";
 import { sendContactMessage } from "@/app/actions/contact";
 
+import { SectionHeader } from "@/components/ui/section-header";
+
 export default function Contact() {
   const { language } = useLanguage();
   const t = DATA[language].contact;
@@ -55,12 +57,14 @@ export default function Contact() {
           {/* Left Side: Contact Info */}
           <div className="space-y-8 animate-in slide-in-from-left-6 duration-700">
             <div>
-              <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-4 text-foreground">
-                {t.title}
-              </h2>
-              <p className="text-muted-foreground text-lg max-w-md">
-                {t.subtitle}
-              </p>
+              <SectionHeader
+                icon={Mail}
+                badgeLabel={language === "en" ? "Get in Touch" : "যোগাযোগ করুন"}
+                title={t.title}
+                description={t.subtitle}
+                className="mb-8 text-center md:text-left mx-auto md:mx-0 max-w-none"
+                gradient="from-primary to-orange-600"
+              />
             </div>
 
             <div className="space-y-4">
@@ -110,7 +114,7 @@ export default function Contact() {
           {/* Right Side: Form */}
           <div className="relative animate-in slide-in-from-right-6 duration-700 delay-200">
             {/* Gradient Glow */}
-            <div className="absolute -inset-1 bg-gradient-to-br from-primary to-orange-400 rounded-3xl blur opacity-20" />
+            <div className="absolute -inset-1 bg-linear-to-br from-primary to-orange-400 rounded-3xl blur opacity-20" />
 
             <div className="relative bg-white dark:bg-black/40 backdrop-blur-xl border border-border/50 rounded-3xl p-8 shadow-xl">
               <form onSubmit={handleSubmit} className="space-y-5">
